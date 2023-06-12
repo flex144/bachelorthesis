@@ -1,20 +1,55 @@
-1. Einleitung 
-
-2. Problemstellung 
-
-3. Analyse
-
-4. Implementierung 
-	4.1 Design
-	4.2 Architektur
-	4.3 Umsetzung
-
-5. Evaluierung
-	5.1 Wie evaluiert man Software
-	5.2 Fragebogen
-	5.3 Evaluierung
-	5.4 Fazit
-
-6. GesamtFazit / Ausblick
+I. Einleitung
+	• Hintergrund und Relevanz des Themas
+	• Zielsetzung der Arbeit
+	• Methodik und Vorgehensweise
+	
+II. Theoretischer Hintergrund
+	• Wasserwacht als gemeinnützige Organisation
+	• Verwaltungsprozesse in der Wasserwacht
+	• Herausforderungen bei der Wachplanerstellung
+	• Bedeutung von IT-Lösungen zur Digitalisierung von Verwaltungsprozessen
+	
+III. Anforderungsanalyse
+	• Identifikation von Anforderungen an die Webanwendung
+		○ Nutzergruppen
+		○ Wachplanung
+		○ Wachbuch
+	• Befragung von Wasserwachtmitgliedern mit Mockups
+		○ Mockups
+			§ Was sind Mockups
+			§ Papier Mockups
+			§ Figma
+		○ Ergebnisse
+	
+IV. Technologien und Methoden
+	• Auswahl geeigneter Technologien und Tools für die Webanwendung
+	• Beschreibung der verwendeten Programmiersprachen, Frameworks und Datenbanken
+		○ Spring
+		○ Thymeleaf
+		○ Postgres
+		○ Wetter API hier?
+	• Agile Entwicklungsmethoden zur Umsetzung des Projekts
+	
+V. Konzeption und Umsetzung
+	• Detaillierte Beschreibung der Konzeption der Webanwendung
+		○ Datenmodell beschreiben
+	• Funktionalitäten und Features der Anwendung
+	• Umsetzung der Webanwendung anhand von Best Practices
+	
+VI. Evaluation
+	• Nutzertests und Feedback der Wasserwachtmitglieder
+	• Bewertung der Praxistauglichkeit und Effektivität der Webanwendung
+	• Verbesserungspotenziale und Lessons Learned
+	• Evtl Klickmetriken?
+	
+VII. Ergebnisse und Diskussion
+	• Zusammenfassung der Ergebnisse
+	• Diskussion der Erkenntnisse im Kontext der Zielsetzung der Arbeit
+	• Ausblick auf zukünftige Entwicklungen und mögliche Erweiterungen der Webanwendung
+	
+VIII. Fazit
+	• Zusammenfassung der Arbeit
+	• Beantwortung der Forschungsfrage
+Schlussfolgerungen und Handlungsempfehlungen
 
 	
