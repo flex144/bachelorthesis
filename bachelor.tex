@@ -4,7 +4,7 @@
 \newcommand{\authorname}{Felix, Wilhelm}
 \newcommand{\immatriculationnumber}{78186}
 \newcommand{\studypath}{Internet Computing}
-\newcommand{\currentsemester}{11}
+\newcommand{\currentsemester}{14}
 \newcommand{\email}{wilhel40@ads.uni-passau.de}
 \newcommand{\worktitle}{Prozessdesign- und Digitalisierung für eine moderne Wasserwachtverwaltung}
 \newcommand{\thesistype}{Bachelorarbeit}
@@ -12,7 +12,7 @@
 \newcommand{\thesisprof}{Prof. Harald Kosch}
 \newcommand{\faculty}{Fakultät für Informatik und Mathematik}
 \newcommand{\chair}{Lehrstuhl für Informatik mit Schwerpunkt Verteilte Informationssysteme}
-\newcommand{\semester}{11}
+\newcommand{\semester}{14}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,7 +46,7 @@
 \usepackage{booktabs}
 \usepackage{enumerate}
 % figures
-%\usepackage{subcaption}
+\usepackage{subcaption}
 
 %mathstuff
 \usepackage[cmex10]{amsmath}
@@ -121,13 +121,10 @@
 \vspace{1.5cm}
 \begin{center}
 
-        {\LARGE Exposé}
+        {\LARGE Bachelorarbeit}
         \\
         {\large
         \vspace{0.3cm}
-        }
-        {\Large
-        zur \thesistype \\
         }
         {\large
         \vspace{0.1cm}
@@ -162,7 +159,13 @@ E-Mail Adresse:       & \email \\
 % MAIN PART:
 
 % Inhaltsverzeichnis:
-%\tableofcontents
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Einleitung}
 \section{Hintergrund und Relevanz des Themas}
@@ -178,6 +181,12 @@ Die vorliegende Arbeit trägt somit zur Verbesserung der Verwaltungsprozesse in 
 \\
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 2
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %TODO
 \chapter{Theoretischer Hintergrund}
 
@@ -190,6 +199,12 @@ Die vorliegende Arbeit trägt somit zur Verbesserung der Verwaltungsprozesse in 
 \section{Bedeutung von IT-Lösungen zur Digitalisierung von Verwaltungsprozessen} 
 
 %TODO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 3
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Anforderungsanalyse}
 \section{Identifikation von Anforderungen an die Webanwendung} 
@@ -233,36 +248,128 @@ Figma ist eine Website, über die man Protoypen und Mockups erstellen kann. Übe
 Mit Figma wurden alle vorgesehenen Seiten der Website dargestellt. Dabei kamen noch weitere Anforderungen auf: \\
 Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung über Email benachrichtigt werden. Neue Nutzer können daher nach dem registrieren nicht sofort auf die Seite zugreifen, sondern müssen erst warten bis ein Admin sie bestätigt hat.\\
 
-
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Anlagen/Figma/2-Registrierung.png}
+    \caption{Registrierung}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Anlagen/Figma/3-LoginSuccess.png}
+    \caption{Benachrichtigung nach Registrierung}
+  \end{subfigure}
+  \caption{AnmeldeProzess}
+  \label{fig:anmeldeprozess}
+\end{figure}
 
 Admins sehen auf der Nutzerübersicht alle Nutzer und ob sie bereits freigeschaltet wurden. Über das jeweilige Nutzerprofil können sie den Nutzer über einen Button freischalten. Danach wird der Nutzer per Email benachrichtigt und erhält Zugang zum System. \\
 
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Anlagen/Figma/6-Nutzerübersicht.png}
+    \caption{Nutzerübersicht}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Anlagen/Figma/7-ProfilAdminSicht.png}
+    \caption{Profil Admin Ansicht}
+  \end{subfigure}
+  \caption{Freischaltungs-Prozess}
+  \label{fig:freischaltprozess}
+\end{figure}
 
-Bei der Wachplanung wurde angefordert, dass Wachtermine einzeln für ein bestimmtes Datum und Uhrzeit angelegt werden können. Außerdem soll es möglich sein gleich eine Reihe an Terminen anzulegen. Dazu muss ein Start- und Enddatum angegeben werden, die Uhrzeit, sowie die Wochentage an denen ein Termin eingestellt werden soll. Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wurde überlegt, ob man die einzelnen Termine farbig codiert, wenn beispielsweise ein "Rettungsschwimmer" und "Wachleiter" noch nicht eingebucht sind. In weiteren Abstimmungsterminen hat man sich aber darauf geeinigt, die Termine rot einzufärben, wenn noch niemand eingebucht ist, und grün einzufärben wenn Nutzer eingebucht sind.
+Bei der Wachplanung wurde angefordert, dass Wachtermine einzeln für ein bestimmtes Datum und Uhrzeit angelegt werden können. Außerdem soll es möglich sein gleich eine Reihe an Terminen anzulegen. Dazu muss ein Start- und Enddatum angegeben werden, die Uhrzeit, sowie die Wochentage an denen ein Termin eingestellt werden soll. Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wurde überlegt, ob man die einzelnen Termine farbig codiert, wenn beispielsweise ein "Rettungsschwimmer" und "Wachleiter" noch nicht eingebucht sind. In weiteren Abstimmungsterminen hat man sich aber darauf geeinigt, die Termine rot einzufärben, wenn noch niemand eingebucht ist, und grün einzufärben wenn Nutzer eingebucht sind (vgl. \cite[S. 49]{sklar2011principles}).
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 4
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\cleardoublepage}{}
+\chapter{Technologien und Methoden}
+
+\section{Auswahl geeigneter Technologien und Tools für die Webanwendung}
+
+\section{Beschreibung der verwendeten Programmiersprachen, Frameworks und Datenbanken}
+
+\subsection{Spring}
+
+\subsection{Thymeleaf}
+
+\subsection{Postgres}
+
+\subsection{Wetter API}
+
+\section{Agile Entwicklungsmethoden zur Umsetzung des Projekts}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 5
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\cleardoublepage}{}
-\chapter{Motivation}
-Aus einer rein analogen Bewältigung von Verwaltungsprozessen ergeben sich eine Reihe von Nachteilen. Einerseits hat man ein Problem mit fehlender Datensicherung. Da man nur ein Dokument mit den benötigten Informationen hat, könnte dies zu Problemen führen wenn dieses beschädigt wird oder verloren geht. Wenn die Daten allerdings in einer Datenbank persistiert werden, kann man leicht ein Backup erstellen. \\
-Des weiteren ist man nicht flexibel bezüglich des Informationsflusses. Eine digitale Repräsentation in einer Webanwendung erlaubt es den Nutzern sich einen besseren und schnelleren Überblick zu erschaffen, da man nicht vor Ort sein muss, um die Informationen abzufragen. Mit dieser Plattform soll eine leichtere Abstimmungsmöglichkeit geboten werden innerhalb der Wasserwacht. 
+\chapter{Konzeption und Umsetzung}
+
+\section{Detaillierte Beschreibung der Konzeption der Webanwendung}
+
+\subsection{Datenmodell}
+\subsection{Prozesse}
+
+\section{Funktionalitäten und Features der Anwendung}
+
+\section{Umsetzung der Webanwendung anhand von Best Practises}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 6
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\cleardoublepage}{}
-\chapter{Related Work}
-Da die Webanwendung von unterschiedlichen Endgeräten aufgerufen werden kann, muss darauf geachtet werden, diese auch mit unterschiedlichen Browser-Auflösungen zu testen (vgl. \cite[S. 49]{sklar2011principles}). Nur so kann eine größtmögliche Flexibilität gewährleistet werden. \\
-Ein weiterer interessanter Aspekt bei der Entwicklung ist die Barrierefreiheit. Hierbei wird darauf geachtet, vor allem Menschen mit Behinderung  die Möglichkeit zu bieten, die Website \glqq uneingeschränkt nutzen zu können\grqq{} \cite[S. 2]{probiesch2013barrierefreiheit}. Es gibt verschiedene Technologien, wie zum Beispiel \glqq Screen - und Webreader\grqq{} oder \glqq Vergrößerungssysteme\grqq{} \cite[S. 3]{probiesch2013barrierefreiheit}, die es ermöglichen diese Barrieren zu überwinden.
+\chapter{Evaluation}
 
+\section{Nutzertests und Feedback der Wasserwachtmitglieder}
+
+\section{Bewertung der Praxistauglichkeit und Effektivität der Webanwendung}
+
+\section{Klickmetriken}
+
+\section{Verbesserungspotentiale}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 7
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\cleardoublepage}{}
-\chapter{Metodologie}
-Das Vorgehen in dieser Arbeit wird in Zusammenarbeit mit der Wasserwacht erfolgen. \\
-In einem initialem Treffen mit der Wasserwacht, sollen die notwendigen Prozessschritte konkretisiert werden, um die Anforderungen an die Anwendung auszumachen und die Prozesse zu modellieren. Wenn diese feststehen, wird in weiteren Abstimmungsterminen mit Mockups versucht die richtige Designentscheidung zu treffen. Danach kann mit der Implementierung der Web-Anwendung begonnen werden. \\
-Plan ist es, mit dem Spring Framework eine Java-Webanwendung aufzubauen, mit Postgres Datenbank Anbindung. Als Frontend-Framework wird Thymeleaf verwendet. \\
-Zur abschließenden Evaluierung wird in einem Experten-Interview überprüft, zu welchem Grad die umgesetzte Anwendung mit den Anforderungen der Wasserwacht übereinstimmt.
+\chapter{Ergebnisse und Diskussion}
+
+\section{Zusammenfassung der Ergebnisse}
+
+\section{Diskussion der Erkenntnisse im Kontext der Zielsetzung der Arbeit}
+
+\section{Ausblick auf zukünftige Entwicklungen und mögliche Erweiterungen der Webanwendung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Kapitel 8
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\cleardoublepage}{}
-\chapter{Zeitplan}
-Ein genauer Zeitplan kann noch nicht festgemacht werden, da die konkreten Anforderungen erst in Abstimmungsterminen mit der Wasserwacht entstehen. Hier ist noch nicht klar wie viele Iterationen, v.A. im Hinblick auf Designfindung, benötigt werden. Erst wenn diese Punkte geklärt wurden, kann mit der Implementierung begonnen werden. 
+\chapter{Fazit}
+
+\section{Zusammenfassung der Arbeit}
+
+\section{Beantwortung der Forschungsfrage}
+
+\section{Schlussfolgerungen und Handlungsempfehlungen}
+
 
 % References (Literaturverzeichnis):
 \bibliographystyle{alpha}
