@@ -38,6 +38,7 @@
 %\usepackage{graphics}
 % Include Graphic-files:
 \usepackage{graphicx}
+\usepackage{float}
 % Include doc++ generated tex-files:
 %\usepackage{docxx}
 % Include PDF links
@@ -55,6 +56,7 @@
 
 %hyperref for nice PDF output
 \usepackage[pdftex, bookmarks=true]{hyperref}
+\usepackage{pdfpages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -297,7 +299,7 @@ Mit Figma wurden alle vorgesehenen Seiten und Funktionalitäten der Website simu
 
 Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung über Email benachrichtigt werden. Neue Nutzer können daher nach dem registrieren nicht sofort auf die Seite zugreifen, sondern müssen erst warten bis ein Admin sie bestätigt hat.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/2-Registrierung.png}
@@ -316,7 +318,7 @@ Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung ü
 
 Admins sehen auf der Nutzerübersicht alle Nutzer und ob sie bereits freigeschaltet wurden. Über das jeweilige Nutzerprofil können sie den Nutzer über einen Button freischalten. Danach wird der Nutzer per Email benachrichtigt und erhält Zugang zum System. \\
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/6-Nutzeruebersicht.png}
@@ -336,17 +338,17 @@ Admins sehen auf der Nutzerübersicht alle Nutzer und ob sie bereits freigeschal
 Bei der Wachplanung wurde angefordert, dass Wachtermine einzeln für ein bestimmtes Datum und Uhrzeit angelegt werden können. Außerdem soll es möglich sein gleich eine Reihe an Terminen anzulegen. Dazu muss ein Start- und Enddatum angegeben werden, die Uhrzeit, sowie die Wochentage an denen ein Termin eingestellt werden soll. \\
 Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wurde überlegt, ob man die einzelnen Termine farbig codiert, wenn beispielsweise ein "Rettungsschwimmer" und "Wachleiter" noch nicht eingebucht sind. In weiteren Abstimmungsterminen hat man sich aber darauf geeinigt, die Termine rot einzufärben, wenn noch niemand eingebucht ist, und grün einzufärben wenn Nutzer eingebucht sind (vgl. \cite[S. 49]{sklar2011principles}).
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
-  \begin{subfigure}[b]{0.4\linewidth}
+  \begin{subfigure}[b]{0.7\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/10-Wachplananlegen.png}
     \caption{Einzeltermin anlegen}
   \end{subfigure}
-  \begin{subfigure}[b]{0.4\linewidth}
+  \begin{subfigure}[b]{0.7\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/12-WachplanReiheAnlegenBef.png}
     \caption{Terminreihe anlegen}
   \end{subfigure}
-  \begin{subfigure}[b]{0.4\linewidth}
+  \begin{subfigure}[b]{0.7\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/13-WachplanuebersichtAngelegt.png}
     \caption{Wachplan Übersicht}
   \end{subfigure}
@@ -357,22 +359,22 @@ Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wur
 %Wachplandurchführung
 \subsubsection{Wachplandurchführung}
 
-\begin{figure}[h!]
+Über einen Klick auf die Terminelemente im Wachplan kommt man auf die Durchführungsseite des jeweiligen Wachtages. Diese Seite wurde entsprechend der initialen Vorgabe (siehe Anhang ~\ref{fig:initial}) nachmodelliert. \\
+Zunächst findet man oben auf der Seite das Tagesdatum, sowie die aktuelle Uhrzeit. Daneben findet man die Uhrzeit des Wachbeginn und Wachende. \\
+Rechts oben befindet sich die Ausgabe der aktuellen Wetterdaten. Diese sollen über 
+
+\begin{figure}[H]
   \centering
-  \begin{subfigure}[b]{0.4\linewidth}
+  \begin{subfigure}[b]{0.7\linewidth}
     \includegraphics[width=\linewidth]{Anlagen/Figma/14-WachplanDurchfuehrung.png}
     \caption{Wachstart}
   \end{subfigure}
-  \begin{subfigure}[b]{0.4\linewidth}
-    \includegraphics[width=\linewidth]{Anlagen/Figma/12-WachplanReiheAnlegenBef.png}
-    \caption{Terminreihe anlegen}
+  \begin{subfigure}[b]{0.7\linewidth}
+    \includegraphics[width=\linewidth]{Anlagen/Figma/19-WachplanDurchfuehrung.png}
+    \caption{Wachende}
   \end{subfigure}
-  \begin{subfigure}[b]{0.4\linewidth}
-    \includegraphics[width=\linewidth]{Anlagen/Figma/13-WachplanuebersichtAngelegt.png}
-    \caption{Wachplan Übersicht}
-  \end{subfigure}
-  \caption{Wachplanung}
-  \label{fig:wachplan}
+  \caption{Wachbuch}
+  \label{fig:wachbuch}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -470,7 +472,34 @@ Um sicherzustellen, dass die Website den Anforderungen der Wasserwacht entsprich
 
 \section{Schlussfolgerungen und Handlungsempfehlungen}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Anlagen
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand{\cleardoublepage}{}
+
+\begin{appendix}
+\chapter{Anhang}
+\section{Initialer Entwurf}
+
+\includepdf[
+    pages=1-2,
+    frame,
+    scale=.75]
+    {Anlagen/WSM_Software_Modul_Wachbuch.pdf}
+\begin{figure}[H]
+\centering
+    \includegraphics[page=3,scale=0.75]{Anlagen/WSM_Software_Modul_Wachbuch.pdf}
+  \caption{Initialer Entwurf}
+  \label{fig:initial}
+\end{figure}
+
+
+\end{appendix}
+
+	 
 % References (Literaturverzeichnis):
 \bibliographystyle{alpha}
 \bibliography{Literatur}
