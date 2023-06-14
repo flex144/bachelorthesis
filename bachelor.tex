@@ -293,11 +293,11 @@ Figma ist eine Website, über die man Protoypen und Mockups erstellen kann. Übe
 
 \subsection{Ergebnisse}
 %Bilder der Mocks darstellen, einzelne Masken wurden konkretisiert, weitere Anforderungen wurden aufgenommen, Emailversand bei Login. 
-Mit Figma wurden alle vorgesehenen Seiten und Funktionalitäten der Website simuliert. Im folgenden werden die Ergebnisse und die weiteren besprochenen Anforderungen präsentiert \\
+Mit Figma wurden alle vorgesehenen Seiten und Funktionalitäten der Website simuliert. Im folgenden werden die Ergebnisse und die weiteren besprochenen Anforderungen präsentiert. \\
 
 \subsubsection{Anmeldeprozess}
 
-Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung über Email benachrichtigt werden. Neue Nutzer können daher nach dem registrieren nicht sofort auf die Seite zugreifen, sondern müssen erst warten bis ein Admin sie bestätigt hat.\\
+Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung über Email benachrichtigt werden. Neue Nutzer können daher nach dem Registrieren nicht sofort auf die Seite zugreifen, sondern müssen erst warten bis ein Admin sie bestätigt hat. Dadurch soll sichergestellt werden, dass nur Wasserwachtmitglieder Zugang zum System erhalten.\\
 
 \begin{figure}[H]
   \centering
@@ -316,7 +316,7 @@ Beim Login Prozess wurde gefordert, dass die "Admins" bei einer Neu-Anmeldung ü
 %Nutzerübersicht
 \subsubsection{Nutzerübersicht}
 
-Admins sehen auf der Nutzerübersicht alle Nutzer und ob sie bereits freigeschaltet wurden. Über das jeweilige Nutzerprofil können sie den Nutzer über einen Button freischalten. Danach wird der Nutzer per Email benachrichtigt und erhält Zugang zum System. \\
+Admins sehen auf der Nutzerübersicht alle Nutzer und ob sie bereits freigeschaltet wurden. Über das jeweilige Nutzerprofil können sie den Nutzer über einen Button freischalten. Danach wird der Nutzer per Email benachrichtigt und erhält Zugang zum System. Außerdem soll für jeden Nutzer eine Statistik erhoben werden, wie viele Stunden im Dienst verbracht wurden. Dies wurde als Anforderung mit aufgenommen, wurde jedoch im Mock nicht mehr eingearbeitet sondern direkt in die tatsächliche Anwendung eingebaut.\\
 
 \begin{figure}[H]
   \centering
@@ -361,7 +361,8 @@ Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wur
 
 Über einen Klick auf die Terminelemente im Wachplan kommt man auf die Durchführungsseite des jeweiligen Wachtages. Diese Seite wurde entsprechend der initialen Vorgabe (siehe Anhang ~\ref{fig:initial}) nachmodelliert. \\
 Zunächst findet man oben auf der Seite das Tagesdatum, sowie die aktuelle Uhrzeit. Daneben findet man die Uhrzeit des Wachbeginn und Wachende. \\
-Rechts oben befindet sich die Ausgabe der aktuellen Wetterdaten. Diese sollen über 
+Rechts oben befindet sich die Ausgabe der aktuellen Wetterdaten, welche automatisch eingespielt werden sollen. Hierfür wurde nach einer passenden Wetter-Anwendung gesucht, welche eine API zur Abfrage der Daten bereitstellt. Darunter befindet sich noch ein Eingabefeld für die aktuelle Wassertemperatur. Diese wird von Wasserwachtmitgliedern gemessen und im System hinterlegt. \\ 
+l
 
 \begin{figure}[H]
   \centering
