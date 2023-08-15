@@ -362,7 +362,8 @@ Als Übersicht für die bisherigen Termine wird ein Kalender verwendet. Hier wur
 Über einen Klick auf die Terminelemente im Wachplan kommt man auf die Durchführungsseite des jeweiligen Wachtages. Diese Seite wurde entsprechend der initialen Vorgabe (siehe Anhang ~\ref{fig:initial}) nachmodelliert. \\
 Zunächst findet man oben auf der Seite das Tagesdatum, sowie die aktuelle Uhrzeit. Daneben findet man die Uhrzeit des Wachbeginn und Wachende. \\
 Rechts oben befindet sich die Ausgabe der aktuellen Wetterdaten, welche automatisch eingespielt werden sollen. Hierfür wurde nach einer passenden Wetter-Anwendung gesucht, welche eine API zur Abfrage der Daten bereitstellt. Darunter befindet sich noch ein Eingabefeld für die aktuelle Wassertemperatur. Diese wird von Wasserwachtmitgliedern gemessen und im System hinterlegt. \\ 
-Darunter befinden sich die Tabellen mit den Helfern für den Wachtag. Auf der linken Seite befindet sich die Tabelle mit den gebuchten Helfern. Ist ein Wachtag noch nicht gestartet, können sich Nutzer über ein darunter liegendes Eingabefeld einbuchen. Somit kann eine Planung der jeweiligen Wachtage stattfinden und man erhält einen Überblick, wie viele Personen planen vor Ort zu sein. Rechts daneben befindet sich die Tabelle der anwesenden Helfer. Sobald ein Wachtag gestartet wurde können sich die Nutzer über das gleiche Eingabefeld einbuchen und ihren Wachbeginn dokumentieren. Hier wurde in weiteren Besprechungen noch angefordert, dass es möglich sein soll Nutzer aus einer Auswahlliste auszuwählen und einzubuchen und zusätzlich auch über ein Freitextfeld einzugeben. Die Möglichkeit Nutzer über einen Freitext hinzufügen zu können wird benötigt, da auch Helfer am Dienst teilnehmen können, die nicht im System als Nutzer registriert sind. \\
+Darunter befinden sich die Tabellen mit den Helfern für den Wachtag. Auf der linken Seite befindet sich die Tabelle mit den gebuchten Helfern. Ist ein Wachtag noch nicht gestartet, können sich Nutzer über ein darunter liegendes Eingabefeld einbuchen. Somit kann eine Planung der jeweiligen Wachtage s
+tattfinden und man erhält einen Überblick, wie viele Personen planen vor Ort zu sein. Rechts daneben befindet sich die Tabelle der anwesenden Helfer. Sobald ein Wachtag gestartet wurde können sich die Nutzer über das gleiche Eingabefeld einbuchen und ihren Wachbeginn dokumentieren. Hier wurde in weiteren Besprechungen noch angefordert, dass es möglich sein soll Nutzer aus einer Auswahlliste auszuwählen und einzubuchen und zusätzlich auch über ein Freitextfeld einzugeben. Die Möglichkeit Nutzer über einen Freitext hinzufügen zu können wird benötigt, da auch Helfer am Dienst teilnehmen können, die nicht im System als Nutzer registriert sind. \\
 Über den Button darunter kann eine An- und Abmeldung in der ILS (Integrierte Leitstelle) dokumentiert werden. Daneben befindet sich der Button zum starten und beenden eines Wachtages.\\
 Darunter befindet sich ein größeres Texteingabefeld, wodurch Geschehnisse während des Wachtages festgehalten werden können im Wachbuch darunter. \\
 Das Wachbuch enthält alle Ereignisse eines Wachtages. Ein Eintrag enthält immer einen Zeitstempel und den jeweiligen Nutzer der den Eintrag verfasst hat, bzw "System" wenn der Eintrag automatisch eingefügt wurde. Das Wachbuch dokumentiert somit Wachbeginn und Ende, Wachbeginn und Ende der jeweiligen Nutzer, die Wetterdaten, die Wassertemperatur, An- und Abmeldungen im ILS, sowie eigene Ereignisangaben der Nutzer.\\
@@ -394,10 +395,22 @@ Im folgenden Kapitel werden die verwendeten Technologien und Methoden der Entwic
 
 \section{Auswahl geeigneter Technologien und Tools für die Webanwendung}
 
+
 Bei der Auswahl der Technologien und Tools für die Entwicklung meiner Webanwendung habe ich mich bewusst für Tools entschieden, mit denen ich bereits praktische Erfahrung sammeln konnte. Während meines Entwicklungspraktikums an der Universität habe ich mit den gleichen Tools gearbeitet, nämlich Java als Programmiersprache, das Spring-Framework für die Backend-Entwicklung, Thymeleaf für die serverseitige HTML-Vorlagenverarbeitung und Bootstrap für das Frontend-Design. Diese praktische Erfahrung ermöglichte mir einen reibungslosen Start in das Projekt, da ich bereits mit den Konzepten, Funktionalitäten und bewährten Methoden dieser Tools vertraut war. Durch die Verwendung von Java und den genannten Frameworks konnte ich eine solide und effiziente Entwicklungsumgebung schaffen, um die Anforderungen der Webanwendung erfolgreich umzusetzen.
 Im folgenden werden die angewandten Technologien näher beschrieben.
 
 \section{Beschreibung der verwendeten Programmiersprachen, Frameworks und Datenbanken}
+
+\subsection{Java}
+Java objektorrientierte Programmiersprache 
+plattformunabhängig
+Java ist eine vielseitige und populäre Programmiersprache, die von Anfängern bis hin zu Profis genutzt wird. Sie zeichnet sich durch Einfachheit und Flexibilität aus und ermöglicht die Entwicklung komplexer Anwendungen.
+
+In Webanwendungen bietet Java mehrere Vorteile. Dank der objektorientierten Natur von Java können Entwickler wiederverwendbaren Code erstellen, was die Entwicklung und Wartung von Webanwendungen erleichtert. Java-Anwendungen sind plattformunabhängig, da sie auf einer virtuellen Maschine (JVM) laufen, was die Kompatibilität mit verschiedenen Betriebssystemen gewährleistet.
+
+Die umfangreiche Java-Standardbibliothek bietet Tools zur Erstellung von sicheren und skalierbaren Webanwendungen. Frameworks wie Spring ermöglichen die einfache Entwicklung von Backend-Funktionalitäten, während Technologien wie Servlets und JSP die Erstellung dynamischer Webseiten unterstützen.
+
+Durch die Verwendung von Java in Webanwendungen profitieren Entwickler von der breiten Unterstützung, einer großen Entwicklergemeinschaft und einer reichhaltigen Auswahl an Ressourcen. Dies trägt dazu bei, effiziente und erfolgreiche Webanwendungen zu erstellen, die den Anforderungen der modernen Online-Welt gerecht werden.
 
 \subsection{Spring}
 
@@ -408,6 +421,7 @@ Im folgenden werden die angewandten Technologien näher beschrieben.
 \subsection{Postgres}
 
 \subsection{Wetter API}
+
 
 \section{Agile Entwicklungsmethoden zur Umsetzung des Projekts}
 
