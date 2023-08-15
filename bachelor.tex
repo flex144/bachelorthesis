@@ -397,7 +397,7 @@ Im folgenden Kapitel werden die verwendeten Technologien und Methoden der Entwic
 
 
 Bei der Auswahl der Technologien und Tools für die Entwicklung meiner Webanwendung habe ich mich bewusst für Tools entschieden, mit denen ich bereits praktische Erfahrung sammeln konnte. Während meines Entwicklungspraktikums an der Universität habe ich mit den gleichen Tools gearbeitet, nämlich Java als Programmiersprache, das Spring-Framework für die Backend-Entwicklung, Thymeleaf für die serverseitige HTML-Vorlagenverarbeitung und Bootstrap für das Frontend-Design. Diese praktische Erfahrung ermöglichte mir einen reibungslosen Start in das Projekt, da ich bereits mit den Konzepten, Funktionalitäten und bewährten Methoden dieser Tools vertraut war. Durch die Verwendung von Java und den genannten Frameworks konnte ich eine solide und effiziente Entwicklungsumgebung schaffen, um die Anforderungen der Webanwendung erfolgreich umzusetzen.
-Im folgenden werden die angewandten Technologien näher beschrieben.
+Im Folgenden werden die angewandten Technologien näher beschrieben.
 
 \section{Beschreibung der verwendeten Programmiersprachen, Frameworks und Datenbanken}
 
@@ -416,21 +416,58 @@ Durch die Verwendung von Java in Webanwendungen profitieren Entwickler von der b
 
 Spring ist ein Open-Source Java Framework und bildet die Grundlage für dieses Projekt. Das Spring Framework wurde entwickelt um die Erstellung von Anwendungen zu erleichtern. \\
 Kernfunktionalität von Spring ist die Inversion of Control (IoC) und die Dependency Injection (DI), die es ermöglicht, Abhängigkeiten zwischen Objekten zu verwalten. Durch die IoC kann eine Komponente Abhängigkeiten zu anderen Objekten definieren, ohne selbst diese Objekte instanziieren zu müssen. Der IoC Container fügt diese Abhängigkeiten dem Objekt ein (DI) (vgl. \cite{springioc}) (vgl. \cite{springiocMisc}) . \\
-Das Spring-Framework deckt verschiedene Bereiche ab, darunter Webentwicklung, Datenbankzugriff, Sicherheit, Messaging und mehr. Spring Boot, eine Erweiterung von Spring, vereinfacht die Erstellung von Stand-alone-Anwendungen und Mikroservices, indem es eine vorkonfigurierte Umgebung bereitstellt. (vgl. \cite{springboot})
+Das Spring-Framework deckt verschiedene Bereiche ab, darunter Webentwicklung, Datenbankzugriff, Sicherheit, Messaging und mehr. Spring Boot, eine Erweiterung von Spring, vereinfacht die Erstellung von Stand-alone-Anwendungen und Mikroservices, indem es eine vorkonfigurierte Umgebung bereitstellt. (vgl. \cite{springboot}) \\
+Ein weiterer Vorteil von Spring ist die große Community die dahinter steht. Für die verschiedenen Spring-Tools werden zahlreiche Tutorials und Dokumentation bereitgestellt, die eine große Hilfe für den Einstieg darstellen. \\
 
 Insgesamt erleichtert das Spring-Framework die Entwicklung von Java-Anwendungen erheblich, indem es bewährte Designmuster, Best Practices und Abstraktionen zur Verfügung stellt. Es ermöglicht es Entwicklern, sich auf die eigentlichen Funktionalitäten ihrer Anwendungen zu konzentrieren und gleichzeitig eine flexible, skalierbare und wartbare Architektur aufzubauen.
 
 \subsection{Thymeleaf}
 
+Thymeleaf ist eine leistungsstarke serverseitige Template-Engine für die Erstellung von Webseiten in Java-basierten Webanwendungen. Sie ermöglicht die nahtlose Integration von dynamischen Inhalten in HTML-Dokumente und erleichtert die Entwicklung von ansprechenden und interaktiven Benutzeroberflächen.
+
+Ein herausragendes Merkmal von Thymeleaf ist seine Fähigkeit, direkt in HTML-Dokumenten zu arbeiten, wodurch die Integration von Serverdaten nahtlos erfolgen kann. Durch die Verwendung von speziellen Attributen und Tags in HTML-Dateien können Entwickler serverseitige Daten in die Darstellung einbetten und komplexe UI-Elemente erstellen.
+
+Thymeleaf unterstützt verschiedene Template-Layouts, Fragmente und Iterationen, die die Wiederverwendbarkeit von Code fördern. Dies ermöglicht eine effiziente Entwicklung von konsistenten und wartbaren Benutzeroberflächen (vgl. \cite{thymeleaf}).
+
+Ein weiterer Vorteil von Thymeleaf ist seine Integration mit Spring. Es passt nahtlos in das Spring-Framework und ermöglicht die einfache Verbindung von Daten aus dem Backend mit den Frontend-Templates. Dies erleichtert die Entwicklung von dynamischen Webseiten, ohne die Trennung zwischen Backend und Frontend zu beeinträchtigen (vgl. \cite{thymeleafspring}). 
+
+Insgesamt bietet Thymeleaf eine effektive Möglichkeit, serverseitige Daten in HTML-Dateien zu integrieren und interaktive Webseiten zu erstellen. Es ist besonders gut in Kombination mit dem Spring-Framework geeignet und trägt zur Entwicklung von modernen und funktionalen Webanwendungen bei.
+
 \subsection{Bootstrap}
 
+Bootstrap ist ein Open-Source-Framework für das Frontend-Webdesign und die Entwicklung von responsiven und benutzerfreundlichen Benutzeroberflächen. Es wurde von Twitter entwickelt und stellt eine Sammlung von vorgefertigten HTML-, CSS- und JavaScript-Komponenten zur Verfügung, die Entwicklern helfen, schnell ansprechende Webseiten zu erstellen.
+
+Ein herausragendes Merkmal von Bootstrap ist seine Fähigkeit zur Erstellung responsiver Designs. Das bedeutet, dass Webseiten, die mit Bootstrap erstellt werden, sich automatisch an verschiedene Bildschirmgrößen und Geräte anpassen können, darunter Desktops, Tablets und Smartphones. Dies trägt zur Verbesserung der Benutzererfahrung auf verschiedenen Plattformen bei.
+
+Bootstrap bietet eine breite Palette von wiederverwendbaren UI-Komponenten wie Navigationsleisten, Buttons, Formularen, Karten, Modals und vieles mehr. Diese Komponenten können einfach in Webseiten integriert werden, wodurch die Entwicklung beschleunigt und konsistente Designs gewährleistet werden.
+Das Framework enthält auch ein flexibles Rastersystem, das es Entwicklern ermöglicht, das Layout einer Webseite in Spalten und Zeilen zu strukturieren. Dies erleichtert die Erstellung komplexer Layouts und die Ausrichtung von Inhalten.
+Bootstrap bietet auch vorgefertigte CSS-Klassen und JavaScript-Funktionalitäten, um häufig verwendete Funktionen wie Animationen, Navigation und Modals zu implementieren. Dies ermöglicht es Entwicklern, interaktive Elemente ohne umfangreichen individuellen Code hinzuzufügen.
+
+Insgesamt erleichtert Bootstrap die Entwicklung moderner Webseiten erheblich, indem es Entwicklern ermöglicht, schnell hochwertige und responsiv gestaltete Benutzeroberflächen zu erstellen. Es ist besonders nützlich für Projekte, die ein ansprechendes Design und eine konsistente Benutzererfahrung erfordern.
+
 \subsection{Postgres}
+%TODO Quellen suchen %
+
+In meiner Bachelorarbeit habe ich PostgreSQL als Datenbankmanagementsystem (DBMS) verwendet, um die Daten meiner Webanwendung effizient zu speichern. Die Entscheidung für PostgreSQL als DBMS basierte auf seinen bewährten Funktionen für Datenpersistenz und -verwaltung, sowie auf seiner nahtlosen Integration mit dem von mir verwendeten Spring Data JPA-Framework.
+
+PostgreSQL bietet eine solide Grundlage für die Datenpersistenz. In meiner Anwendung habe ich Daten in Form von Entitäten gespeichert. Entitäten sind Java-Klassen, die mit der Datenbanktabelle übereinstimmen und von Spring Data JPA verwaltet werden. Die Interaktion mit der Datenbank erfolgt durch objektorientierte Operationen, die von Spring Data JPA bereitgestellt werden. Dies ermöglichte mir, Datenbankabfragen und -manipulationen auf einer höheren Abstraktionsebene zu handhaben.
+
+Obwohl PostgreSQL eine breite Palette von erweiterten Funktionen bietet, die von räumlichen Abfragen bis zur Unterstützung komplexer Datentypen reichen, habe ich mich auf die grundlegenden Aspekte der Datenpersistenz beschränkt. Dazu gehörten die Erstellung von Datenbanktabellen basierend auf meinen Entitäten, die Definition von Primärschlüsseln und Fremdschlüsselbeziehungen für die Datenintegrität, sowie die Verwendung von Indizes zur Optimierung von Abfragen.
+
+Die Verwendung von Spring Data JPA hat die Arbeit mit PostgreSQL weiter erleichtert. Spring Data JPA abstrahiert die Datenbankinteraktionen und bietet eine einfache Möglichkeit, CRUD-Operationen (Create, Read, Update, Delete) durchzuführen. Dank der Integration von Spring Boot konnte ich die Datenbankkonfiguration vereinfachen und die Anwendung mit minimalem Konfigurationsaufwand entwickeln.
+
+Insgesamt ermöglichte die Kombination von PostgreSQL und Spring Data JPA eine effiziente und zuverlässige Datenpersistenz in meiner Webanwendung. Die solide Leistung von PostgreSQL und die praktische Abstraktion von Spring Data JPA erleichterten die Entwicklung und Wartung meiner Anwendung erheblich.
 
 \subsection{Wetter API}
 
 
 \section{Agile Entwicklungsmethoden zur Umsetzung des Projekts}
 
+Die agile Umsetzungsmethode bildete das Rückgrat der Entwicklung meiner Webanwendung für die lokale Wasserwacht. In Anbetracht der sich ständig ändernden Anforderungen und der Notwendigkeit, schnell auf Feedback zu reagieren, erwies sich die Agile Methodik als äußerst geeignet, um Flexibilität und Effizienz in den Entwicklungsprozess zu integrieren.
+
+In meiner Bachelorarbeit habe ich eine agile Herangehensweise gewählt, um die Entwicklung meiner Webanwendung zu steuern. Während ich mich von den Kernprinzipien agiler Methoden inspirieren ließ, habe ich die traditionellen Sprints mit festgelegten Zeiträumen nicht strikt umgesetzt. Stattdessen habe ich mich für eine iterative Vorgehensweise entschieden, bei der ich in einer bestimmten Zeitspanne so weit wie möglich gearbeitet habe und dann die Ergebnisse vorgestellt und diskutiert habe. 
+
+Die regelmäßige Abstimmung mit den Mitgliedern der Wasserwacht ermöglichte es schnell auf neue Anforderungen und Feedback zu reagieren. Gleichzeitig konnte ich dadurch den Fokus auf eine kontinuierliche Weiterentwicklung und Verbesserung der Anwendung legen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
