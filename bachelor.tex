@@ -459,6 +459,15 @@ Die Verwendung von Spring Data JPA hat die Arbeit mit PostgreSQL weiter erleicht
 Insgesamt ermöglichte die Kombination von PostgreSQL und Spring Data JPA eine effiziente und zuverlässige Datenpersistenz in meiner Webanwendung. Die solide Leistung von PostgreSQL und die praktische Abstraktion von Spring Data JPA erleichterten die Entwicklung und Wartung meiner Anwendung erheblich.
 
 \subsection{Wetter API}
+Um für einen Wachtag die aktuellen Wetter Daten speichern zu können, wurde eine Wetter-API integriert.
+
+Die Integration der Wetter-API erforderte die Auswahl einer geeigneten API und die Einbindung der API-Anfragen in den Entwicklungsprozess. In meiner Bachelorarbeit habe ich mich für die API von VisualCrossing entschieden, da sie zuverlässige und detaillierte Wetterdaten bereitstellt, die speziell auf den Standort der Wasserwacht zugeschnitten sind. Ein weiterer Vorteil dieser API ist, dass sie pro Tag 1000 Abfragen kostenfrei erlaubt. Wie ich das sicherstelle wird in Kapitel ... näher erläutert.
+
+Die Wetter-API ermöglichte es meiner Webanwendung, aktuelle Wetterdaten wie Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit abzurufen.
+
+Die eingebundenen Wetterdaten wurden dann in die Benutzeroberfläche meiner Anwendung integriert, um den Benutzern leicht verständliche Informationen zur Verfügung zu stellen. Zusätzlich werden diese Daten auch automatisch in das Wachbuch geschrieben. So kann man auch nach Ende eines Wachtages die genauen Wetterverhältnisse nachvollziehen.
+
+Insgesamt trug die Integration einer Wetter-API zur Erweiterung der Funktionalität meiner Webanwendung bei, indem sie Echtzeit-Wetterdaten in die Anwendung einbrachte.
 
 
 \section{Agile Entwicklungsmethoden zur Umsetzung des Projekts}
